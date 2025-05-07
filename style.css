@@ -1,0 +1,328 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+  }
+  
+  #page-header {
+    position: relative;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+  
+  .header-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .header-overlay h1 {
+    font-size: 2.5em;
+    margin: 0;
+    padding: 0.5em;
+    text-align: center;
+  }
+  
+
+  .description {
+    padding: 1.5em;
+    text-align: center;
+  }
+  
+  .pricing {
+    display: flex;
+    justify-content: space-around;
+    padding: 2em;
+    background: #fff;
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+  
+  .plan {
+    flex: 1;
+    background: #f9f9f9;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1em;
+    margin: 1em;
+  }
+  
+  .plan p {
+    flex-grow: 1;
+  }
+  
+  .img-container {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background: #ccc;
+  }
+  
+  .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .carousel-section {
+    margin: 3em 0;
+    text-align: center;
+  }
+  
+  .carousel-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 0.3em;
+  }
+  
+  .carousel-section p {
+    color: #555;
+    margin-bottom: 1.5em;
+    max-width: 600px;
+    margin: 0 auto 1.5em auto;
+  }
+  
+  .carousel-wrapper {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3em;
+    height: auto;
+  }
+  
+  .carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 3em;
+    flex-wrap: nowrap;
+    overflow: hidden;
+  }
+  
+  .carousel .img-container {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s;
+    opacity: 0.5;
+    cursor: pointer;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .carousel .img-container.center {
+    width: 160px;
+    height: 160px;
+    opacity: 1;
+    transform: scale(1.2);
+    z-index: 2;
+    margin: 1em;
+  }
+  
+  /* Tablet and below: switch to drag-scroll layout */
+  @media (max-width: 1024px) {
+    .carousel {
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      justify-content: flex-start;
+      padding: 1em 0;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+  
+    .carousel .img-container {
+      width: 140px;
+      height: 140px;
+      flex: 0 0 auto;
+      scroll-snap-align: center;
+      opacity: 1;
+      transform: none;
+    }
+  
+    .carousel .img-container.center {
+      width: 140px;
+      height: 140px;
+      transform: none;
+    }
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1em;
+    background: #222;
+    color: white;
+  }
+  
+  footer a {
+    color: #61dafb;
+    text-decoration: none;
+    margin: 0 0.5em;
+  }
+  
+  #modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .modal-content {
+    position: relative;
+    background: white;
+    padding: 1em;
+    border-radius: 8px;
+    max-width: 90vw;
+    max-height: 90vh;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  }
+  
+  .modal-content img {
+    max-width: 100%;
+    max-height: 80vh;
+    display: block;
+    margin: auto;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: white;
+    color: black;
+    font-size: 24px;
+    padding: 4px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  }
+  
+  .carousel-arrow {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: rgba(126, 126, 126, 0.8);
+    padding: 0.3em 0.5em;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.2s, color 0.2s;
+    line-height: 1;
+  }  
+  
+  .carousel-arrow:hover {
+    color: rgba(154, 154, 154, 0.8);
+  }
+  
+  .left-arrow {
+    left: 10%;
+  }
+  
+  .right-arrow {
+    right: 10%;
+  }
+  
+  @media (max-width: 1024px) {
+    .carousel-arrow {
+      font-size: 2rem;
+      background: rgba(0, 0, 0, 0.2);
+      color: rgba(255, 255, 255, 0.85);
+
+    }
+  
+    .left-arrow {
+      left: 0.5rem;
+    }
+  
+    .right-arrow {
+      right: 0.5rem;
+    }
+
+    .pricing {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+    .plan {
+        width: 90%;
+        max-width: 400px;
+        margin: 1em 0;
+    }
+
+    #page-header {
+        position: relative;
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+      }
+
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  
+  #modal-overlay {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  @media (max-width: 768px) {
+    .carousel::before,
+    .carousel::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 20px;
+      height: 20px;
+      border: solid rgba(100, 100, 100, 0.4);
+      border-width: 0 3px 3px 0;
+      padding: 5px;
+      z-index: 5;
+      pointer-events: none;
+    }
+  
+    .carousel::before {
+      left: 10px;
+      transform: translateY(-50%) rotate(135deg);
+    }
+  
+    .carousel::after {
+      right: 10px;
+      transform: translateY(-50%) rotate(-45deg);
+    }
+  }
+  
