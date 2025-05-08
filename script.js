@@ -134,7 +134,7 @@ function populateFooterLinks(mailImg, instaImg) {
   mailLink.innerHTML = `<img src="${mailImg}" alt="Email" style="${iconStyle}" />`;
 
   const instaLink = document.createElement("a");
-  instaLink.href = "https://www.instagram.com/benpaintsmasks?igsh=MWlvOHprNmlzaDg5aw%3D%3D&utm_source=qr";
+  instaLink.href = "https://www.instagram.com/creasecustoms_?igsh=MWlvOHprNmlzaDg5aw%3D%3D&utm_source=qr";
   instaLink.target = "_blank";
   instaLink.innerHTML = `<img src="${instaImg}" alt="Instagram" style="${iconStyle}" />`;
 
