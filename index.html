@@ -7,51 +7,62 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header id="page-header">
-        <div class="header-overlay">
-            <h1>SOMETHING SOMETHING WEBSITE TITLE</h1>
-        </div>
-    </header>
-      
-
-
-    <main>
-    <!-- Section 1: Description -->
-    <section class="description">
-        <p>Offering custom paint jobs, unique designs. Adding a creative new life to your gear.</p>
-        <p>See the pricing below.</p>
-    </section>
-
-    <!-- Section 2: Pricing Plans -->
-    <section class="pricing" id="pricing-plans">
-        <!-- JS will inject pricing cards here -->
-    </section>
-
-    <!-- Section 3: Carousel -->
-    <section class="carousel-section">
-        <h2>Portfolio Highlights</h2>
-        <p>Swipe through some of my recent projects. Select an image to view it in detail.</p>
-        
-        <div class="carousel-wrapper">
-            <div class="carousel-arrow left-arrow" id="left-arrow">&#10094;</div>
-            <div class="carousel" id="carousel">
-            <!-- JS will populate images -->
-            </div>
-            <div class="carousel-arrow right-arrow" id="right-arrow">&#10095;</div>
-        </div>
-        </section>           
-    </main>
-
-    <footer>
-    <div>
-        <p>For more content and contact, check the links below!</p>
+  <header id="page-header">
+    <div class="header-overlay">
+      <h1>SOMETHING SOMETHING WEBSITE TITLE</h1>
     </div>
-    <p>
-        <a href="https://www.instagram.com/benpaintsmasks?igsh=MWlvOHprNmlzaDg5aw%3D%3D&utm_source=qr" target="_blank">Instagram</a> |
-        <a href="mailto:ben.publicbusiness@gmail.com">Email</a>
-    </p>
-    </footer>
+  </header>
 
-    <script src="script.js"></script>
+  <main>
+    <section class="description">
+      <p>Offering custom paint jobs, unique designs. Adding a creative new life to your gear.</p>
+      <p>See the pricing below.</p>
+    </section>
+
+    <section class="pricing" id="pricing-plans">
+      <!-- JS will inject pricing cards here -->
+    </section>
+
+    <!-- Section 3: Additional Information -->
+    <section class="info-section">
+    <h2>Additional Information</h2>
+    <div class="info-boxes">
+        <div class="info-box">
+        <h3>Discounts</h3>
+        <p>Leiden Lions affiliated players, get up to <strong>10% off</strong>.</p>
+        <p>U18 players, get up to <strong>10% off</strong>.</p>
+        <p>Leiden Lions affiliated U18 players, get up to <strong>20% off</strong>.</p>
+        </div>
+        <div class="info-box">
+        <h3>Design Consultations</h3>
+        <p>2D design mockups and consultation included with all packages.</p>
+        </div>
+        <div class="info-box">
+        <h3>Turnaround Time</h3>
+        <p>Depending on the complexity, orders are completed within <strong>1–3 weeks</strong>.</p>
+        </div>
+    </div>
+    </section>
+
+    <section class="carousel-section">
+      <h2>Portfolio Highlights</h2>
+      <p>Swipe through some of my recent projects. Select an image to view it in detail.</p>
+      
+      <div class="carousel-wrapper">
+        <div class="carousel-arrow left-arrow" id="left-arrow">&#10094;</div>
+        <div class="carousel" id="carousel"></div>
+        <div class="carousel-arrow right-arrow" id="right-arrow">&#10095;</div>
+      </div>
+    </section>           
+  </main>
+
+  <footer>
+    <div>
+      <p>For more content and contact, check the links below!</p>
+    </div>
+    <div id="footer-links"></div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

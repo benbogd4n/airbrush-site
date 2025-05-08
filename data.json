@@ -1,46 +1,50 @@
 {
-    "pricingImages": [
-      "imgs/pricing/img_01.jpg",
-      "imgs/pricing/img_02.jpg",
-      "imgs/pricing/img_03.jpg"
-    ],
-    "carouselImages": [
-      "imgs/carousel/carousel_img_01a.jpg",
-      "imgs/carousel/carousel_img_01b.jpg",
-      "imgs/carousel/carousel_img_01c.jpg",
-      "imgs/carousel/carousel_img_02a.jpg",
-      "imgs/carousel/carousel_img_02b.jpg",
-      "imgs/carousel/carousel_img_02c.jpg",
-      "imgs/carousel/carousel_img_02d.jpg",
-      "imgs/carousel/carousel_img_03a.jpg",
-      "imgs/carousel/carousel_img_03b.jpg",
-      "imgs/carousel/carousel_img_03c.jpg",
-      "imgs/carousel/carousel_img_04a.jpg",
-      "imgs/carousel/carousel_img_04b.jpg",
-      "imgs/carousel/carousel_img_04c.jpg",
-      "imgs/carousel/carousel_img_05a.jpg",
-      "imgs/carousel/carousel_img_05b.jpg",
-      "imgs/carousel/carousel_img_05c.jpg",
-      "imgs/carousel/carousel_img_06a.jpg",
-      "imgs/carousel/carousel_img_06b.jpg",
-      "imgs/carousel/carousel_img_06c.jpg",
-      "imgs/carousel/carousel_img_06d.jpg",
-      "imgs/carousel/carousel_img_06e.jpg",
-      "imgs/carousel/carousel_img_07a.jpg",
-      "imgs/carousel/carousel_img_07b.jpg",
-      "imgs/carousel/carousel_img_07c.jpg",
-      "imgs/carousel/carousel_img_08a.jpg",
-      "imgs/carousel/carousel_img_08b.jpg",
-      "imgs/carousel/carousel_img_08c.jpg",
-      "imgs/carousel/carousel_img_09a.jpg",
-      "imgs/carousel/carousel_img_09b.jpg",
-      "imgs/carousel/carousel_img_09c.jpg",
-      "imgs/carousel/carousel_img_10a.jpg",
-      "imgs/carousel/carousel_img_10b.jpg",
-      "imgs/carousel/carousel_img_10c.jpg"
-    ],
-    "headerImage": [
-      "imgs/header/header.jpg"
-    ]
-  }
-  
+  "pricingImages": [
+    "imgs/pricing/img_01.jpg",
+    "imgs/pricing/img_02.jpg",
+    "imgs/pricing/img_03.jpg"
+  ],
+  "carouselImages": [
+    "imgs/carousel/carousel_img_01a.jpg",
+    "imgs/carousel/carousel_img_01b.jpg",
+    "imgs/carousel/carousel_img_01c.jpg",
+    "imgs/carousel/carousel_img_02a.jpg",
+    "imgs/carousel/carousel_img_02b.jpg",
+    "imgs/carousel/carousel_img_02c.jpg",
+    "imgs/carousel/carousel_img_02d.jpg",
+    "imgs/carousel/carousel_img_03a.jpg",
+    "imgs/carousel/carousel_img_03b.jpg",
+    "imgs/carousel/carousel_img_03c.jpg",
+    "imgs/carousel/carousel_img_04a.jpg",
+    "imgs/carousel/carousel_img_04b.jpg",
+    "imgs/carousel/carousel_img_04c.jpg",
+    "imgs/carousel/carousel_img_05a.jpg",
+    "imgs/carousel/carousel_img_05b.jpg",
+    "imgs/carousel/carousel_img_05c.jpg",
+    "imgs/carousel/carousel_img_06a.jpg",
+    "imgs/carousel/carousel_img_06b.jpg",
+    "imgs/carousel/carousel_img_06c.jpg",
+    "imgs/carousel/carousel_img_06d.jpg",
+    "imgs/carousel/carousel_img_06e.jpg",
+    "imgs/carousel/carousel_img_07a.jpg",
+    "imgs/carousel/carousel_img_07b.jpg",
+    "imgs/carousel/carousel_img_07c.jpg",
+    "imgs/carousel/carousel_img_08a.jpg",
+    "imgs/carousel/carousel_img_08b.jpg",
+    "imgs/carousel/carousel_img_08c.jpg",
+    "imgs/carousel/carousel_img_09a.jpg",
+    "imgs/carousel/carousel_img_09b.jpg",
+    "imgs/carousel/carousel_img_09c.jpg",
+    "imgs/carousel/carousel_img_10a.jpg",
+    "imgs/carousel/carousel_img_10b.jpg",
+    "imgs/carousel/carousel_img_10c.jpg"
+  ],
+  "headerImage": [
+    "imgs/header/header.jpg"
+  ],
+  "mail":
+    "imgs/links/gmail.png",
+  "instagram":
+    "imgs/links/instagram.png",
+  "favicon": "imgs/favicon/favicon.png"
+}
