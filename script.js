@@ -26,32 +26,24 @@ function populatePricing(images) {
   const pricingContainer = document.getElementById("pricing-plans");
   const titles = ["Basic", "Standard", "Premium"];
   const descriptions = [
-    "For simple designs. 1 - 2 colors with a simple logo, shapes or numbers added.",
-    "Detailed designs with multiple colors. Great for fun designs with minimal details.",
-    "Intricate custom designs. Fully custom, ranged color detail and shading. Cage paint included."
+    "<strong>Ideal for entry-level customization.</strong><ul><li>Simple designs</li><li>1 – 2 colors</li><li>Basic logo, shapes or numbers</li><li>Cage paint not included</li><li>Free mockup and planning included**</li></ul>",
+    "<strong>Perfect for expressive, colorful themes.</strong><ul><li>Detailed designs with multiple colors</li><li>Ideal for fun, minimal-detail artwork</li><li>Cage paint not included</li></ul>",
+    "<strong>High quality, detailed product.</strong><ul><li>Intricate and fully custom designs</li><li>Wide color range, details and shading</li><li>Cage paint included</li></ul>"
   ];
-  const priceTexts = ["Approximate price range:", "Approximate price range:", "Approximate price range:"];
-  const prices = ["150EUR - 200EUR", "250EUR - 300EUR", "350EUR - 400EUR"];
-  const disclaimers = [
-    "Prices shown are indicators, actual price varies based on paint and other equipment costs. Cage paint can be added for further costs. Option for design and mockup included.",
-    "Prices shown are indicators, actual price varies based on paint and other equipment costs. Cage paint can be added for further costs. Option for design and mockup included.",
-    "Prices shown are indicators, actual price varies based on paint and other equipment costs. Cage paint, option for custom design and mockup included."
-  ];
+  const prices = ["€150 – €200", "€250 – €300", "€350 – €400"];
 
   images.forEach((src, i) => {
     const plan = document.createElement("div");
     plan.className = "plan";
     plan.innerHTML = `
       <h3>${titles[i]}</h3>
-      <p>${descriptions[i]}</p>
+      <div class="price-descriptions">${descriptions[i]}</div>
       <div>
-        <p>${priceTexts[i]}</p>
-        <p>${prices[i]}</p>
+        <p class="price-highlight"><strong>${prices[i]}*</strong></p>
       </div>
       <div class="img-container">
         <img src="${src}" alt="${titles[i]} plan example" />
       </div>
-      <p>${disclaimers[i]}</p>
     `;
     pricingContainer.appendChild(plan);
   });
@@ -134,12 +126,12 @@ function populateFooterLinks(mailImg, instaImg) {
   mailLink.innerHTML = `<img src="${mailImg}" alt="Email" style="${iconStyle}" />`;
 
   const instaLink = document.createElement("a");
-  instaLink.href = "https://www.instagram.com/creasecustoms_?igsh=MWlvOHprNmlzaDg5aw%3D%3D&utm_source=qr";
+  instaLink.href = "https://www.instagram.com/creasecustoms_";
   instaLink.target = "_blank";
   instaLink.innerHTML = `<img src="${instaImg}" alt="Instagram" style="${iconStyle}" />`;
 
-  footerLinks.appendChild(mailLink);
   footerLinks.appendChild(instaLink);
+  footerLinks.appendChild(mailLink);
 }
 
 function scrollCarouselBy(step) {
