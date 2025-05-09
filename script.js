@@ -32,6 +32,7 @@ function populatePricing(images) {
   ];
   const prices = ["€150 – €200", "€250 – €300", "€350 – €400"];
 
+  const fragment = document.createDocumentFragment();
   images.forEach((src, i) => {
     const plan = document.createElement("div");
     plan.className = "plan";
@@ -42,11 +43,12 @@ function populatePricing(images) {
         <p class="price-highlight"><strong>${prices[i]}*</strong></p>
       </div>
       <div class="img-container">
-        <img src="${src}" alt="${titles[i]} plan example" />
+        <img src="${src}" alt="${titles[i]} plan example" loading="lazy" />
       </div>
     `;
-    pricingContainer.appendChild(plan);
+    fragment.appendChild(plan);
   });
+  pricingContainer.appendChild(fragment);
 }
 
 let currentModalIndex = 1;
@@ -112,23 +114,19 @@ function populateFooterLinks(mailImg, instaImg) {
   const footerLinks = document.getElementById("footer-links");
   if (!footerLinks) return;
 
-  footerLinks.style.display = "flex";
-  footerLinks.style.justifyContent = "center";
-  footerLinks.style.alignItems = "center";
-  footerLinks.style.gap = "1.5rem";
-  footerLinks.style.margin = "1em 0";
+  footerLinks.className = "footer-icons";
 
-  const iconStyle = "height: 40px; width: 40px; object-fit: contain;";
+  const iconClass = "footer-icon";
 
   const mailLink = document.createElement("a");
   mailLink.href = "mailto:ben.publicbusiness@gmail.com";
   mailLink.target = "_blank";
-  mailLink.innerHTML = `<img src="${mailImg}" alt="Email" style="${iconStyle}" />`;
+  mailLink.innerHTML = `<img src="${mailImg}" alt="Email" class="${iconClass}" />`;
 
   const instaLink = document.createElement("a");
   instaLink.href = "https://www.instagram.com/creasecustoms_";
   instaLink.target = "_blank";
-  instaLink.innerHTML = `<img src="${instaImg}" alt="Instagram" style="${iconStyle}" />`;
+  instaLink.innerHTML = `<img src="${instaImg}" alt="Instagram" class="${iconClass}" />`;
 
   footerLinks.appendChild(instaLink);
   footerLinks.appendChild(mailLink);
@@ -151,6 +149,7 @@ function renderDragCarousel(images) {
     const img = document.createElement("img");
     img.src = src;
     img.alt = `Carousel image ${idx + 1}`;
+    img.loading = "lazy";
 
     img.addEventListener("click", () => openModal(src));
     imgContainer.appendChild(img);
@@ -178,6 +177,7 @@ function renderCenteredCarousel(images, centerIndex) {
     img.src = images[idx];
     img.alt = `Carousel image ${idx + 1}`;
     img.dataset.index = idx;
+    img.loading = "lazy";
 
     if (i === half) imgContainer.classList.add("center");
 
@@ -224,8 +224,12 @@ function getVisibleCount() {
   return 3;
 }
 
+let resizeTimeout;
 window.addEventListener("resize", () => {
-  initCarousel(carouselImages);
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(() => {
+    initCarousel(carouselImages);
+  }, 200);
 });
 
 function openModal(src) {
