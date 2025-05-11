@@ -44,5 +44,6 @@
   ],
   "mail": "imgs/links/gmail.png",
   "instagram": "imgs/links/instagram.png",
-  "favicon": "imgs/favicon/favicon.png"
+  "favicon": "imgs/favicon/favicon.png",
+  "headerIcon":"imgs/header/header_icon.png"
 }
