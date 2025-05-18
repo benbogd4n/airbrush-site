@@ -18,17 +18,33 @@ body {
   padding: 0;
   background: #f4f4f4;
   color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #page-header {
   position: relative;
-  height: 400px;
+  height: 100vh;
   background-size: cover;
   background-position: center;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
   color: white;
+  padding: 2em 1em;
+  box-sizing: border-box;
 }
 
 .header-overlay {
@@ -36,10 +52,18 @@ body {
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 2em;
+  padding-left: 2em;
+  padding-right: 2em;
+  /* gap: 2em; */
   /* border: 2px solid red; */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .header-overlay h1 {
@@ -58,9 +82,12 @@ body {
 }
 
 .description {
+  color: rgba(210, 105, 30, 0.9);
   padding: 1.5em;
+  padding-top: 0;
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 .pricing {
@@ -364,10 +391,10 @@ footer a {
     display: none;
   }
   .header-icon {
-    min-width: 15em;
-    min-height: 15em;
-    margin-right: 1.5em;
-    /* display: block; */
+    display: block;
+    margin: 0 auto;
+    height: 10em;
+    width: auto;
   }
 }
 
@@ -445,5 +472,53 @@ footer a {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin-right: 1em;
+}
+
+.header-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  transform: scale(1.6);
+}
+
+.header-sub{
+  padding-top: 0;
+}
+
+@media (max-width: 600px) {
+  .header-text {
+    display: none;
+  }
+}
+
+.home-nav-links {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+.home-nav-links a {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 700;
+  padding: 0.75em 1.5em;
+  border-radius: 0.375em;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+  font-size: 1.2em;
+  width: fit-content;
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.8);
+}
+
+.home-nav-links a:hover {
+  color: rgba(255, 255, 255, 1);
+  transform: scale(1.04);
+  background-color: rgba(255, 106, 0, 0.4);
+}
+
+.home-nav-links a:focus {
+  outline: none;
 }

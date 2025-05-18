@@ -42,6 +42,15 @@
   "headerImage": [
     "imgs/header/header.jpg"
   ],
+  "processStepsImages": [
+    "imgs/steps/step1.jpg",
+    "imgs/steps/step2.jpg",
+    "imgs/steps/step3.jpg"
+  ],
+  "aboutMeImages": [
+    "imgs/about-me/am_main.jpg",
+    "imgs/about-me/am1.jpg"
+  ],
   "mail": "imgs/links/gmail.png",
   "instagram": "imgs/links/instagram.png",
   "favicon": "imgs/favicon/favicon.png",
