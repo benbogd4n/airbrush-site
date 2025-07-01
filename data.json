@@ -32,12 +32,22 @@
     "imgs/carousel/carousel_img_08a.jpg",
     "imgs/carousel/carousel_img_08b.jpg",
     "imgs/carousel/carousel_img_08c.jpg",
+    "imgs/carousel/carousel_img_08d.jpg",
     "imgs/carousel/carousel_img_09a.jpg",
     "imgs/carousel/carousel_img_09b.jpg",
     "imgs/carousel/carousel_img_09c.jpg",
+    "imgs/carousel/carousel_img_09d.jpg",
+    "imgs/carousel/carousel_img_09e.jpg",
+    "imgs/carousel/carousel_img_09f.jpg",
     "imgs/carousel/carousel_img_10a.jpg",
     "imgs/carousel/carousel_img_10b.jpg",
     "imgs/carousel/carousel_img_10c.jpg"
+  ],
+  "stepsImages": [
+    "imgs/steps/step1.jpg",
+    "imgs/steps/step2.jpg",
+    "imgs/steps/step3b.jpg",
+    "imgs/steps/step4.jpg"
   ],
   "headerImage": [
     "imgs/header/header.jpg"

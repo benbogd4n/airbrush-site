@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
       setFavicon(data.favicon);
       setHeaderImage(data.headerImage?.[0]);
       populatePricing(data.pricingImages);
+      populateProcessSteps(data.stepsImages);
       const validImages = await filterExistingImages(data.carouselImages);
       initCarousel(validImages);
       populateFooterLinks(data.mail, data.instagram);
@@ -26,9 +27,9 @@ function populatePricing(images) {
   const pricingContainer = document.getElementById("pricing-plans");
   const titles = ["Basic", "Standard", "Premium"];
   const descriptions = [
-    "<strong>Ideal for entry-level customization.</strong><ul><li>Simple designs</li><li>1 – 2 colors</li><li>Basic logo, shapes or numbers</li><li>Cage paint not included</li><li>Free mockup and planning included**</li></ul>",
-    "<strong>Perfect for expressive, colorful themes.</strong><ul><li>Detailed designs with multiple colors</li><li>Ideal for fun, minimal-detail artwork</li><li>Cage paint not included</li></ul>",
-    "<strong>High quality, detailed product.</strong><ul><li>Intricate and fully custom designs</li><li>Wide color range, details and shading</li><li>Cage paint included</li></ul>"
+    "<strong>Ideal for entry-level customization.</strong><ul><li>Simple designs</li><li>1 – 2 colors</li><li>Basic logo, shapes or numbers</li><li>Cage paint not included</li><li>Free mockup and planning included**</li><li>Takes approximately 2 weeks</li></ul>",
+    "<strong>Perfect for expressive, colorful themes.</strong><ul><li>Detailed designs with multiple colors</li><li>Ideal for fun, minimal-detail artwork</li><li>Cage paint not included</li><li>Takes approximately 3 weeks</li></ul>",
+    "<strong>High quality, detailed product.</strong><ul><li>Intricate and fully custom designs</li><li>Wide color range, details and shading</li><li>Cage paint included</li><li>Takes approximately 4 weeks</li></ul>"
   ];
   const prices = ["€150 – €200", "€250 – €300", "€350 – €400"];
 
@@ -49,6 +50,36 @@ function populatePricing(images) {
     fragment.appendChild(plan);
   });
   pricingContainer.appendChild(fragment);
+}
+
+// Populate process steps section
+function populateProcessSteps(images) {
+  const processContainer = document.getElementById("process-steps");
+  const titles = ["Planning", "Preparation", "Painting", "Finish"];
+  const descriptions = [
+    "<ul><li>We start with a detailed discussion to understand your vision and preferences. This includes selecting colors, themes, and any specific designs you have in mind.</li><li>Then I come back to you with a simple sketch to start with and allign our ideas.</li><li>After we agree on the design, I can give a a price estimate.</li></ul>",
+    "<ul><li>If you agree with the end price, I will ask for a deposit (20% of estimated price) before I work on the actual detailed 2D design plan and 3D renders (if its a simple design the deposit is not necessary).</li><li>Depending on the design complexity you can have 2 or 4 revisions before the final 3D design.</li><li>After that if you want further changes, that is possible for additional costs.</li></ul>",
+    "<ul><li>After final design is accepted we arrange delivery of the mask, rest of the payment etc.</li><li>Painting process will take about 2-4 weeks depending on complexity. Any add-ons could add to this time.</li><li>I will try my best to provide consistent updates and images during the painting process.</li></ul>",
+    "<ul><li>The product is finished with a basic layer of protective clear coat (matte or glossy as requested). If you choose the fully polished finish this would expectedly add 2-3 days to the preparation.</li><li>For the best result polished look is recommended for a smooth shine.</li><li>Faster work can be requested and discussed after the planning is done for additional charge.</li></ul>"
+  ];
+
+  const cardsWrapper = document.createElement("div");
+  cardsWrapper.className = "process-cards"; // New wrapper div
+
+  images.forEach((src, i) => {
+    const card = document.createElement("div");
+    card.className = "process-step";
+    card.innerHTML = `
+      <h3>${titles[i]}</h3>
+      <div class="process-descriptions">${descriptions[i]}</div>
+      <div class="img-container">
+        <img src="${src}" alt="${titles[i]} step example" loading="lazy" />
+      </div>
+    `;
+    cardsWrapper.appendChild(card); // Add to wrapper, not directly to section
+  });
+
+  processContainer.appendChild(cardsWrapper); // Add wrapper to section
 }
 
 let currentModalIndex = 1;
