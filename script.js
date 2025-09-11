@@ -31,7 +31,7 @@ function populatePricing(images) {
     "<strong>Perfect for expressive, colorful themes.</strong><ul><li>Detailed designs with multiple colors</li><li>Ideal for fun, minimal-detail artwork</li><li>Cage paint not included</li><li>Takes approximately 3 weeks</li></ul>",
     "<strong>High quality, detailed product.</strong><ul><li>Intricate and fully custom designs</li><li>Wide color range, details and shading</li><li>Cage paint included</li><li>Takes approximately 4 weeks</li></ul>"
   ];
-  const prices = ["€150 – €200", "€250 – €300", "€350 – €400"];
+  const prices = ["€250 – €300", "€300 – €450", "€450 – €500"];
 
   const fragment = document.createDocumentFragment();
   images.forEach((src, i) => {

@@ -1,8 +1,8 @@
 {
   "pricingImages": [
-    "imgs/pricing/img_01.jpg",
-    "imgs/pricing/img_02v2.jpg",
-    "imgs/pricing/img_03v2.jpg"
+    "imgs/pricing/img_01v3.jpg",
+    "imgs/pricing/img_02v4.jpg",
+    "imgs/pricing/img_03v3.jpg"
   ],
   "carouselImages": [
     "imgs/carousel/carousel_img_01a.jpg",
@@ -41,13 +41,20 @@
     "imgs/carousel/carousel_img_09f.jpg",
     "imgs/carousel/carousel_img_10a.jpg",
     "imgs/carousel/carousel_img_10b.jpg",
-    "imgs/carousel/carousel_img_10c.jpg"
+    "imgs/carousel/carousel_img_10c.jpg",
+    "imgs/carousel/carousel_img_10d.jpg",
+    "imgs/carousel/carousel_img_10e.jpg",
+    "imgs/carousel/carousel_img_10f.jpg",
+    "imgs/carousel/carousel_img_11a.jpg",
+    "imgs/carousel/carousel_img_11b.jpg",
+    "imgs/carousel/carousel_img_11c.jpg",
+    "imgs/carousel/carousel_img_11d.jpg"
   ],
   "stepsImages": [
-    "imgs/steps/step1.jpg",
-    "imgs/steps/step2.jpg",
-    "imgs/steps/step3b.jpg",
-    "imgs/steps/step4.jpg"
+    "imgs/steps/step1v2.jpg",
+    "imgs/steps/step2v2.jpg",
+    "imgs/steps/step3v2.jpg",
+    "imgs/steps/step4v2.jpg"
   ],
   "headerImage": [
     "imgs/header/header.jpg"
