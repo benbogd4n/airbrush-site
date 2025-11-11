@@ -27,11 +27,11 @@ function populatePricing(images) {
   const pricingContainer = document.getElementById("pricing-plans");
   const titles = ["Basic", "Standard", "Premium"];
   const descriptions = [
-    "<strong>Ideal for entry-level customization.</strong><ul><li>Simple designs</li><li>1 – 2 colors</li><li>Basic logo, shapes or numbers</li><li>Cage paint not included</li><li>Free mockup and planning included**</li><li>Takes approximately 2 weeks</li></ul>",
-    "<strong>Perfect for expressive, colorful themes.</strong><ul><li>Detailed designs with multiple colors</li><li>Ideal for fun, minimal-detail artwork</li><li>Cage paint not included</li><li>Takes approximately 3 weeks</li></ul>",
-    "<strong>High quality, detailed product.</strong><ul><li>Intricate and fully custom designs</li><li>Wide color range, details and shading</li><li>Cage paint included</li><li>Takes approximately 4 weeks</li></ul>"
+    "<strong>Ideal for simple customization.</strong><ul><li>Simple designs with 1 – 2 colors</li><li>Basic logo, shapes or numbers</li><li>Cage paint not included</li><li>Free mockup and planning included**</li><li>Turnaround time from 2 weeks</li></ul>",
+    "<strong>Perfect for expressive, colorful themes.</strong><ul><li>Detailed designs with multiple colors</li><li>Ideal for fun, minimal-detail artwork</li><li>Cage paint not included</li><li>Turnaround time from 3 weeks</li></ul>",
+    "<strong>High quality, detailed product.</strong><ul><li>Intricate and fully custom designs</li><li>Wide color range, details and shading</li><li>Cage paint included</li><li>Turnaround time from 4 weeks</li></ul>"
   ];
-  const prices = ["€250 – €300", "€300 – €450", "€450 – €500"];
+  const prices = ["From €250", "From €300", "From €450"];
 
   const fragment = document.createDocumentFragment();
   images.forEach((src, i) => {
