@@ -14,6 +14,37 @@ document.addEventListener("DOMContentLoaded", () => {
       const fallbackImages = Array.from({ length: 9 }, (_, i) => `imgs/carousel_img_0${i + 1}.jpg`);
       initCarousel(fallbackImages);
     });
+
+  // Promo modal logic
+  const promoOverlay = document.getElementById("modalOverlay");
+  const promoCloseBtn = promoOverlay?.querySelector(".modal-close");
+  const promoBtn = promoOverlay?.querySelector(".modal-button");
+
+  if (promoOverlay && promoCloseBtn && promoBtn) {
+    promoCloseBtn.addEventListener("click", () => {
+      promoOverlay.style.display = "none";
+    });
+
+    promoBtn.addEventListener("click", (e) => {
+      e.preventDefault(); // stop default link behavior if it's an <a>
+
+      const target = document.getElementById("promo");
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+
+      // Close modal after scroll starts
+      setTimeout(() => {
+        promoOverlay.style.display = "none";
+      }, 200);
+    });
+
+    promoOverlay.addEventListener("click", (e) => {
+      if (e.target === promoOverlay) {
+        promoOverlay.style.display = "none";
+      }
+    });
+  }
 });
 
 function setHeaderImage(src) {

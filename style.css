@@ -62,6 +62,62 @@ h2 {
   margin-bottom: 1em;
 }
 
+.promotion {
+  background-color: #c0392b;
+  color: whitesmoke;
+  padding: 1.5em;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.promo-section {
+  background-color: #c0392b;
+  color: whitesmoke;
+  padding: 1.5em;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.promotion-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2em auto 0 auto;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 0.375em;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  align-self: center;
+}
+
+.promotion-button:hover {
+  color: #ccc;
+}
+
+.contact-link {
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* margin: 2em auto 0 auto; */
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+  /* border: none; */
+  /* border-radius: 0.375em; */
+  cursor: pointer;
+  text-decoration: none;
+  /* text-align: center;
+  align-self: center; */
+}
+
+.contact-link:hover {
+  color: #ccc;
+}
+
 .description {
   padding: 1.5em;
   text-align: center;
@@ -568,4 +624,95 @@ footer a {
 
   
 
+}
+
+/* Overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Modal window */
+.modal {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 420px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+/* Headings */
+.modal h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+}
+
+.modal h3 {
+  margin: 8px 0 16px;
+  color: #c0392b;
+  font-weight: 600;
+}
+
+/* Text */
+.modal p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+/* CTA Button */
+.modal-button {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 12px 24px;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.modal-button:hover {
+  background: #333;
+}
+
+/* Close button */
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+/* Footnote */
+.modal-footnote {
+  display: block;
+  margin-top: 16px;
+  font-size: 0.75rem;
+  color: #666;
+}
+
+/* Animation */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
