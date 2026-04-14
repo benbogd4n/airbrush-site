@@ -58,9 +58,9 @@ function populatePricing(images) {
   const pricingContainer = document.getElementById("pricing-plans");
   const titles = ["Basic", "Standard", "Premium"];
   const descriptions = [
-    "<strong>Ideal for simple customization.</strong><ul><li>Simple designs with 1 – 2 colors</li><li>Basic logo, shapes or numbers</li><li>Cage paint not included</li><li>Free mockup and planning included**</li><li>Turnaround time from 2 weeks</li></ul>",
-    "<strong>Perfect for expressive, colorful themes.</strong><ul><li>Detailed designs with multiple colors</li><li>Ideal for fun, minimal-detail artwork</li><li>Cage paint not included</li><li>Turnaround time from 3 weeks</li></ul>",
-    "<strong>High quality, detailed product.</strong><ul><li>Intricate and fully custom designs</li><li>Wide color range, details and shading</li><li>Cage paint included</li><li>Turnaround time from 4 weeks</li></ul>"
+    "<strong>Ideal for simple customization.</strong><ul><li>Simple designs with 1 – 2 colors</li><li>Basic logo, shapes or numbers</li><li>Turnaround time from 2 weeks</li></ul>",
+    "<strong>Perfect for expressive, colorful themes.</strong><ul><li>Detailed designs with multiple colors</li><li>Ideal for fun, minimal-detail artwork</li><li>Turnaround time from 3 weeks</li></ul>",
+    "<strong>High quality, detailed product.</strong><ul><li>Intricate and fully custom designs</li><li>Wide color range, details and shading</li><li>Turnaround time from 4 weeks</li></ul>"
   ];
   const prices = ["From €300", "From €450", "From €600"];
 
@@ -91,7 +91,7 @@ function populateProcessSteps(images) {
     "<ul><li>We start with a detailed discussion to understand your vision and preferences. This includes selecting colors, themes, and any specific designs you have in mind.</li><li>After that I come back to you with a simple sketch to start with and allign our ideas.</li><li>After we agree on the design, I can give a a price estimate.</li></ul>",
     "<ul><li>If you agree with the end price, I will ask for a deposit (20% of estimated price) before I work on the actual detailed 2D design plan and 3D renders (if its a simple design the deposit is not necessary).</li><li>Depending on the design complexity you can have 2 or 4 revisions before the final 3D design.</li><li>After that if you want further changes, that is possible for additional costs.</li></ul>",
     "<ul><li>After final design is accepted we arrange delivery of the mask, rest of the payment etc.</li><li>The painting process will take about 2-4 weeks depending on complexity. Any add-ons could add to this time.</li><li>I will try my best to provide consistent updates and images during the painting process.</li></ul>",
-    "<ul><li>The product is finished with a basic layer of protective clear coat (matte or glossy as requested). If you choose the fully polished finish this would expectedly add 2-3 days to the preparation.</li><li>For the best result the polished look is recommended for a smooth shine.</li><li>Faster work can be requested and discussed after the planning is done for additional charge.</li></ul>"
+    "<ul><li>The product is finished with a basic layer of protective clear coat (matte or polished glossy as requested). <li>Priority work can be requested and discussed after the planning is done for additional charge.</li></ul>"
   ];
 
   const cardsWrapper = document.createElement("div");
@@ -181,7 +181,7 @@ function populateFooterLinks(mailImg, instaImg) {
   const iconClass = "footer-icon";
 
   const mailLink = document.createElement("a");
-  mailLink.href = "mailto:ben.publicbusiness@gmail.com";
+  mailLink.href = "mailto:info@creasecustoms.com";
   mailLink.target = "_blank";
   mailLink.innerHTML = `<img src="${mailImg}" alt="Email" class="${iconClass}" />`;
 
