@@ -62,7 +62,7 @@ function populatePricing(images) {
     "<strong>Perfect for expressive, colorful themes.</strong><ul><li>Detailed designs with multiple colors</li><li>Ideal for fun, minimal-detail artwork</li><li>Turnaround time from 3 weeks</li></ul>",
     "<strong>High quality, detailed product.</strong><ul><li>Intricate and fully custom designs</li><li>Wide color range, details and shading</li><li>Turnaround time from 4 weeks</li></ul>"
   ];
-  const prices = ["From €300", "From €450", "From €600"];
+  const prices = ["From €200", "From €400", "From €600"];
 
   const fragment = document.createDocumentFragment();
   images.forEach((src, i) => {
